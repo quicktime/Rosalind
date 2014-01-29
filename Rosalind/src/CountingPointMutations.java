@@ -5,7 +5,7 @@ import java.util.Scanner;
 import javax.swing.JFileChooser;
 
 
-public class ComplementingaStrandofDNA {
+public class CountingPointMutations {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		//
@@ -26,12 +26,13 @@ public class ComplementingaStrandofDNA {
 		//
 		FileReader freader = new FileReader(filename);
 		Scanner fscan = new Scanner(freader);
-		String dataStr = fscan.next(); // Read the first line into a String.
+		String dataStr = fscan.nextLine(); // Read the first line into a String.
+		String dataStr2 = fscan.nextLine(); // Read the second line into a String.
 		fscan.close();
 		
 		DNASequenceInterface ds0 = new DNASequence(dataStr);
 		
-		System.out.println(ds0.reverseCompliment());
+		System.out.println(ds0.hammingDistance(dataStr2));
 
 	}
 

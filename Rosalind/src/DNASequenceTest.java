@@ -6,24 +6,31 @@ public class DNASequenceTest {
 		String dna_string2 = "CCATCGGTAGCGCATCCTTAGTCCAATTAAGTCCCTATCCAGGCGCTCCGCCGAAGGTCTATATCCATTTGTCAGCAGACACGC";
 		String dna_string3 = "CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT";
 		
-		DNASequence ds0 = new DNASequence(dna_string0);
-		DNASequence ds1 = new DNASequence(dna_string1);
-		DNASequence ds2 = new DNASequence(dna_string2);
-		DNASequence ds3 = new DNASequence(dna_string3);
+		String sequence = "CAAG";
+		String otherSequence = "GTTG";
+		
+//		DNASequenceInterface ds0 = new DNASequence(dna_string0);
+//		DNASequenceInterface ds1 = new DNASequence(dna_string1);
+//		DNASequenceInterface ds2 = new DNASequence(dna_string2);
+//		DNASequenceInterface ds3 = new DNASequence(dna_string3);
+		
+		DNASequenceInterface ds4 = new DNASequence(sequence);
 		
 
-		System.out.println(ds1.gc_content() + "%");
-		System.out.println("");
+//		System.out.println(ds1.gc_content() + "%");
+//		System.out.println("");
+//		
+//
+//		System.out.println(ds2.gc_content() + "%");
+//		System.out.println("");
+//		
+//
+//		System.out.println(ds3.gc_content() + "%");
+//		System.out.println("");
+//		
+//		System.out.println(ds0.reverseCompliment());
 		
-
-		System.out.println(ds2.gc_content() + "%");
-		System.out.println("");
-		
-
-		System.out.println(ds3.gc_content() + "%");
-		System.out.println("");
-		
-		System.out.println(ds0.reverseCompliment());
+		System.out.println(ds4.hammingDistance(otherSequence));
 	}
 	
 //	public static void prints() {

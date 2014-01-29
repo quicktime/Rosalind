@@ -6,7 +6,7 @@
  * @author Brendan Dolan
  * 
  */
-public class DNASequence {
+public class DNASequence implements DNASequenceInterface {
 
 	private String seq;
 	private int countOfA;
@@ -35,26 +35,50 @@ public class DNASequence {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#nucleotideCount()
+	 */
+	@Override
 	public int nucleotideCount() {
 		return seq.length();
 	}
 
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#countA()
+	 */
+	@Override
 	public int countA() {
 		return countOfA;
 	}
 
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#countC()
+	 */
+	@Override
 	public int countC() {
 		return countOfC;
 	}
 
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#countG()
+	 */
+	@Override
 	public int countG() {
 		return countOfG;
 	}
 
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#countT()
+	 */
+	@Override
 	public int countT() {
 		return countOfT;
 	}
 
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#gc_content()
+	 */
+	@Override
 	public double gc_content() {
 		int numerator = countG() + countC();
 		int denominator = nucleotideCount();
@@ -95,8 +119,34 @@ public class DNASequence {
 		return str2;
 	}
 	
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#reverseCompliment()
+	 */
+	@Override
 	public String reverseCompliment() {
 		return reverse(compliment(this.seq));
+	}
+	
+	/* (non-Javadoc)
+	 * @see DNASequenceInterface#hammingDistance(java.lang.String)
+	 */
+	@Override
+	public int hammingDistance(String otherSequence) {
+		String sequence = this.seq;
+		int count = 0;
+		if (otherSequence.length() != otherSequence.length()) {
+			throw new IllegalArgumentException("Illegal String!");
+		} else {
+			for (int i = 0; i < otherSequence.length(); ++i) {
+				char c = otherSequence.charAt(i);
+				char c2 = sequence.charAt(i);
+				
+				if (c != c2) {
+					count++;
+				}
+			}
+		}
+		return count;
 	}
 	
 //	private int countCode(char c) {

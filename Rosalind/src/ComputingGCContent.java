@@ -5,7 +5,7 @@ import java.util.Scanner;
 import javax.swing.JFileChooser;
 
 
-public class ComplementingaStrandofDNA {
+public class ComputingGCContent {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		//
@@ -29,10 +29,8 @@ public class ComplementingaStrandofDNA {
 		String dataStr = fscan.next(); // Read the first line into a String.
 		fscan.close();
 		
-		DNASequenceInterface ds0 = new DNASequence(dataStr);
+		System.out.println(dataStr);
 		
-		System.out.println(ds0.reverseCompliment());
-
 	}
 
 }
