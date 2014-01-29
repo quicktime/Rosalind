@@ -149,6 +149,8 @@ public class DNASequence implements DNASequenceInterface {
 		return count;
 	}
 	
+	
+	
 //	private int countCode(char c) {
 //		int count = 0;
 //		for (int i = 0; i < seq.length(); ++i) {

@@ -9,26 +9,26 @@ public class DNASequenceTest {
 		String sequence = "CAAG";
 		String otherSequence = "GTTG";
 		
-//		DNASequenceInterface ds0 = new DNASequence(dna_string0);
-//		DNASequenceInterface ds1 = new DNASequence(dna_string1);
-//		DNASequenceInterface ds2 = new DNASequence(dna_string2);
-//		DNASequenceInterface ds3 = new DNASequence(dna_string3);
+		DNASequenceInterface ds0 = new DNASequence(dna_string0);
+		DNASequenceInterface ds1 = new DNASequence(dna_string1);
+		DNASequenceInterface ds2 = new DNASequence(dna_string2);
+		DNASequenceInterface ds3 = new DNASequence(dna_string3);
 		
 		DNASequenceInterface ds4 = new DNASequence(sequence);
 		
 
-//		System.out.println(ds1.gc_content() + "%");
-//		System.out.println("");
-//		
-//
-//		System.out.println(ds2.gc_content() + "%");
-//		System.out.println("");
-//		
-//
-//		System.out.println(ds3.gc_content() + "%");
-//		System.out.println("");
-//		
-//		System.out.println(ds0.reverseCompliment());
+		System.out.println(ds1.gc_content() + "%");
+		System.out.println("");
+		
+
+		System.out.println(ds2.gc_content() + "%");
+		System.out.println("");
+		
+
+		System.out.println(ds3.gc_content() + "%");
+		System.out.println("");
+		
+		System.out.println(ds0.reverseCompliment());
 		
 		System.out.println(ds4.hammingDistance(otherSequence));
 	}
