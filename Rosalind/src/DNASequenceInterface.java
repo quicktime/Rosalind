@@ -49,4 +49,10 @@ public interface DNASequenceInterface {
 	 */
 	public abstract int hammingDistance(String otherSequence);
 
+	/**
+	 * 
+	 * @return
+	 */
+	public abstract String RNACodon();
+
 }

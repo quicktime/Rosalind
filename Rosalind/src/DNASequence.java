@@ -31,8 +31,8 @@ public class DNASequence implements DNASequenceInterface {
 				default : throw new IllegalArgumentException(
 						"Bad DNA code '" + c + "' at position " + i);
 			}
-			this.seq = str;
 		}
+		this.seq = str;
 	}
 
 	/* (non-Javadoc)
@@ -147,6 +147,19 @@ public class DNASequence implements DNASequenceInterface {
 			}
 		}
 		return count;
+	}
+	
+	public String RNACodon() {
+		String str = this.seq;
+		String str2 = "";
+		for (int i = 0; i < str.length(); i += 3) {
+			if (str.substring(0 , 2) == "UUU" || str.substring(i , i + 2) == "UUC") {
+				str2 += 'F';
+			} else if (str.substring(i , i + 2) == "UUA" || str.substring(i , i + 2) == "UUG") {
+				str2 += 'L';
+			}
+		}
+		return str2;
 	}
 	
 	
