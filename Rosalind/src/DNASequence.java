@@ -134,7 +134,7 @@ public class DNASequence implements DNASequenceInterface {
 	public int hammingDistance(String otherSequence) {
 		String sequence = this.seq;
 		int count = 0;
-		if (otherSequence.length() != otherSequence.length()) {
+		if (sequence.length() != otherSequence.length()) {
 			throw new IllegalArgumentException("Illegal String!");
 		} else {
 			for (int i = 0; i < otherSequence.length(); ++i) {
